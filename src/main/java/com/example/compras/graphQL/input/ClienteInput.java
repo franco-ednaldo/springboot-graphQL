@@ -1,0 +1,18 @@
+package com.example.compras.graphQL.input;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class ClienteInput {
+    private Long id;
+
+    private String nome;
+
+    private String email;
+}
