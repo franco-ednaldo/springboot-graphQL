@@ -1,0 +1,10 @@
+type Query {
+    hello:String
+    cliente:Cliente
+    clientes:[Cliente]
+}
+
+type Cliente {
+    nome:String
+    email: String;
+}
