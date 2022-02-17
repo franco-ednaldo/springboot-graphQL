@@ -3,6 +3,7 @@ package com.example.compras.domain.service;
 import com.example.compras.domain.Compra;
 import com.example.compras.domain.repository.CompraRepository;
 import com.example.compras.graphQL.dto.CompraRelatorio;
+import com.example.compras.graphQL.exception.DomainException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -44,6 +45,7 @@ public class CompraService {
     }
 
     public List<CompraRelatorio> compraRelatorio(Long id) {
+        //throw new DomainException("Nenhum registro encontrado com id informado!");
         return this.compraRepository.compraFindById(id);
     }
 }
