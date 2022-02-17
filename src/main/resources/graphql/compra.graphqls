@@ -1,0 +1,33 @@
+type Compra {
+    id: ID!
+    quantidade: Int!
+    status: String!
+    cliente: Cliente!
+    produto: Produto!
+}
+
+type CompraRelatorio {
+   cliente: String
+   produto: String
+   quantidade: Int
+   valor: Float
+}
+
+input CompraInput {
+    id: ID
+    quantidade: Int!
+    status: String!
+    cliente: ID!
+    produto: ID!
+}
+
+extend type Query {
+    compraById(id:ID):Compra
+    compras:[Compra]
+    compraRelatorio(id:ID):[CompraRelatorio]
+}
+
+extend type Mutation {
+    salvarCompra(compra:CompraInput):Compra
+    deletarCompra(id:ID):Boolean
+}

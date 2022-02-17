@@ -1,10 +1,19 @@
 package com.example.compras.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "compra")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Compra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

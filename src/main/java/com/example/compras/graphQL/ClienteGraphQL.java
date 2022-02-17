@@ -4,7 +4,7 @@ import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.example.compras.domain.Cliente;
 import com.example.compras.graphQL.input.ClienteInput;
-import com.example.compras.service.ClienteService;
+import com.example.compras.domain.service.ClienteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

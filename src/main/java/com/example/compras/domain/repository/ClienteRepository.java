@@ -1,4 +1,4 @@
-package com.example.compras.repository;
+package com.example.compras.domain.repository;
 
 import com.example.compras.domain.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;

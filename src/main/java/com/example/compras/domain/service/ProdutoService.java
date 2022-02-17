@@ -1,7 +1,7 @@
-package com.example.compras.service;
+package com.example.compras.domain.service;
 
 import com.example.compras.domain.Produto;
-import com.example.compras.repository.ProdutoRepository;
+import com.example.compras.domain.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

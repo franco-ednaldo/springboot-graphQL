@@ -8,6 +8,7 @@ type Cliente {
     id: ID,
     nome:String!,
     email:String!
+    compras:[Compra]
 }
 input ClienteInput {
           id: ID,
