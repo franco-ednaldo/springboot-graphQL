@@ -23,7 +23,7 @@ input CompraInput {
 
 extend type Query {
     compraById(id:ID):Compra
-    compras:[Compra]
+    compras(page:Int=0, size:Int=1):[Compra]
     compraRelatorio(id:ID):[CompraRelatorio]
 }
 

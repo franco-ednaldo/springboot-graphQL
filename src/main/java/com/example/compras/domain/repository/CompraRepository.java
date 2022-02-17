@@ -19,4 +19,5 @@ public interface CompraRepository extends JpaRepository<Compra, Long> {
     @Query("select new com.example.compras.graphQL.dto.CompraRelatorio(c.cliente.nome, c.produto.nome, c.quantidade, c.produto.valor)" +
             " from Compra c where c.id=:id")
     List<CompraRelatorio> compraFindById(@Param("id") Long id);
+
 }

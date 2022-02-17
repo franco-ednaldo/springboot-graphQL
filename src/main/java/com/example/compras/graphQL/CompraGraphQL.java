@@ -10,6 +10,9 @@ import com.example.compras.domain.service.CompraService;
 import com.example.compras.domain.service.ProdutoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -52,8 +55,9 @@ public class CompraGraphQL implements GraphQLQueryResolver, GraphQLMutationResol
         return this.compraService.findById(id);
     }
 
-    public List<Compra> compras() {
-        return this.compraService.findAll();
+    public Page<Compra> compras(Integer page, Integer size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return this.compraService.findAll(pageable);
     }
 
     public List<CompraRelatorio> compraRelatorio(Long id) {

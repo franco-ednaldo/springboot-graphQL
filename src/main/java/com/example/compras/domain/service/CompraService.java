@@ -4,6 +4,8 @@ import com.example.compras.domain.Compra;
 import com.example.compras.domain.repository.CompraRepository;
 import com.example.compras.graphQL.dto.CompraRelatorio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -22,8 +24,8 @@ public class CompraService {
         return this.compraRepository.findById(id).orElse(Compra.builder().build());
     }
 
-    public List<Compra> findAll() {
-        return this.compraRepository.findAll();
+    public Page<Compra> findAll(Pageable pageable) {
+        return this.compraRepository.findAll(pageable);
     }
 
     @Transactional
